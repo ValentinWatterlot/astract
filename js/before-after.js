@@ -61,7 +61,7 @@ window.initBeforeAfter = function () {
 /* ---------------- Filtres liste projets ---------------- */
 window.initFilters = function () {
   const btns = document.querySelectorAll(".filter-btn");
-  const items = document.querySelectorAll(".list-item");
+  const items = document.querySelectorAll(".pj-card");
   if (!btns.length) return;
 
   btns.forEach((btn) => {

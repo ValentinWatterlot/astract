@@ -223,19 +223,23 @@ function initShowcase() {
       invalidateOnRefresh: true,
     },
   });
+  // 1) l'image grandit jusqu'au plein écran (atteint à 55% du scroll)
   tl.fromTo(
     media,
     { scale: startScale, borderRadius: 10 },
-    { scale: 1, borderRadius: 0, duration: 1 },
+    { scale: 1, borderRadius: 0, duration: 0.55 },
     0
   );
-  tl.to(eyebrow, { autoAlpha: 0, duration: 0.3 }, 0);
+  if (eyebrow) tl.to(eyebrow, { autoAlpha: 0, duration: 0.2 }, 0.25);
+  // 2) puis le titre du projet apparaît (plein écran déjà atteint)
   tl.fromTo(
     leadcap,
     { autoAlpha: 0, yPercent: 40 },
-    { autoAlpha: 1, yPercent: 0, duration: 0.3 },
-    0.7
+    { autoAlpha: 1, yPercent: 0, duration: 0.22 },
+    0.58
   );
+  // 3) temps de pause : image pleine largeur + titre visible avant les panneaux suivants
+  tl.to({}, { duration: 0.2 }, 0.8);
 
   // Projets suivants : le texte monte quand le panneau arrive du bas.
   gsap.utils.toArray(".show-panel").forEach((panel) => {
@@ -283,6 +287,44 @@ function initStudioIntro() {
   });
 }
 
+/* ---------------- Stack projets : la dernière card rétrécit jusqu'à disparaître ---------------- */
+function initProjectStack() {
+  const cards = gsap.utils.toArray(".pj-card");
+  if (!cards.length) return;
+  const last = cards[cards.length - 1];
+  const others = cards.slice(0, -1);
+
+  const headerH =
+    parseInt(getComputedStyle(document.documentElement).getPropertyValue("--header-h")) || 84;
+
+  gsap.set(last, { transformOrigin: "center center", willChange: "transform" });
+
+  // Dès que la dernière card est épinglée (elle couvre encore toute la pile
+  // à scale 1), on masque les cards derrière → bascule invisible. Ainsi,
+  // en rétrécissant, c'est le fond blanc qui apparaît, pas la card précédente.
+  if (others.length) {
+    ScrollTrigger.create({
+      trigger: last,
+      start: "top " + (headerH + 2),
+      onEnter: () => others.forEach((c) => (c.style.visibility = "hidden")),
+      onLeaveBack: () => others.forEach((c) => (c.style.visibility = "visible")),
+    });
+  }
+
+  // La dernière card rétrécit jusqu'à disparaître, puis la page continue.
+  gsap.to(last, {
+    scale: 0,
+    ease: "none",
+    scrollTrigger: {
+      trigger: last,
+      start: "top " + headerH,
+      end: () => "+=" + window.innerHeight * 0.8,
+      scrub: true,
+      invalidateOnRefresh: true,
+    },
+  });
+}
+
 /* ---------------- Compteurs (preuve sociale) ---------------- */
 function initStats() {
   gsap.utils.toArray("[data-count]").forEach((el) => {
@@ -315,6 +357,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initStats();
     initStudioIntro();
     initShowcase();
+    initProjectStack();
     ScrollTrigger.refresh();
   });
 });

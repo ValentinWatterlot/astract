@@ -85,18 +85,22 @@ function renderShowcase(root) {
 /* ---- Liste filtrable ---- */
 function renderList(grid) {
   grid.innerHTML = PROJECTS.map(
-    (p) => `
-    <a class="list-item" href="project.html?id=${p.id}" data-cat="${p.category}">
-      <div class="list-item__media">
-        <span class="card-tag">${p.category}</span>
-        <img src="${p.cover}" alt="${p.title}" loading="lazy"/>
-      </div>
-      <div class="proj-card__foot">
-        <span class="proj-card__title">${p.title}</span>
-        <span class="proj-card__meta">${p.location} · ${p.year}</span>
+    (p, i) => `
+    <a class="pj-card" href="project.html?id=${p.id}" data-cat="${p.category}" style="z-index:${i + 1}">
+      <div class="pj-card__img-wrap">
+        <img class="pj-card__img" src="${p.cover}" alt="${p.title}" loading="lazy"/>
+        <div class="pj-card__meta-top">
+          <span>${p.category}</span>
+          <span>${p.location} · ${p.year}</span>
+        </div>
+        <div class="pj-card__corners" aria-hidden="true">
+          <span>+</span><span>+</span><span>+</span><span>+</span>
+        </div>
+        <div class="pj-card__cta" aria-hidden="true">Voir le projet</div>
+        <h2 class="pj-card__title">${p.title}</h2>
       </div>
     </a>`
-  ).join("");
+  ).join("") + `<div class="pj-runway" aria-hidden="true"></div>`;
 }
 
 /* ---- Page projet ---- */

@@ -65,10 +65,9 @@ function renderShowcase(root) {
     .join("");
 
   root.innerHTML = `
-    <div class="show-stack" data-show-stack>
+<div class="show-stack" data-show-stack>
       <div class="show-lead__stage" data-show-stage>
-        <span class="show-lead__eyebrow" data-show-eyebrow><i class="led"></i>Projets sélectionnés</span>
-        <a class="show-card--lead" href="project.html?id=${lead.id}" data-cursor>
+<a class="show-card--lead" href="project.html?id=${lead.id}" data-cursor>
           <div class="show-card__media" data-show-media>
             <img src="${lead.cover}" alt="${lead.title}"/>
           </div>

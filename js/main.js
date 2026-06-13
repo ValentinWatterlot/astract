@@ -6,28 +6,7 @@
 gsap.registerPlugin(ScrollTrigger);
 
 /* ---------------- Curseur personnalisé ---------------- */
-function initCursor() {
-  if (window.matchMedia("(hover: none)").matches) return;
-  const cur = document.createElement("div");
-  cur.className = "c-cursor";
-  document.body.appendChild(cur);
-
-  const xTo = gsap.quickTo(cur, "x", { duration: 0.35, ease: "power3" });
-  const yTo = gsap.quickTo(cur, "y", { duration: 0.35, ease: "power3" });
-
-  window.addEventListener("mousemove", (e) => {
-    xTo(e.clientX);
-    yTo(e.clientY);
-  });
-
-  const hoverables = "a, button, .hero__track-wrap, .ba, [data-cursor]";
-  document.addEventListener("mouseover", (e) => {
-    if (e.target.closest(hoverables)) cur.classList.add("hover");
-  });
-  document.addEventListener("mouseout", (e) => {
-    if (e.target.closest(hoverables)) cur.classList.remove("hover");
-  });
-}
+function initCursor() {}
 
 /* ---------------- Preloader ---------------- */
 function initPreloader(done) {

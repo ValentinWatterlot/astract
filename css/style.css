@@ -1138,6 +1138,34 @@ body.is-loading { overflow: hidden; height: 100vh; }
    Showcase projets (accueil) — zoom du 1er projet + stack
    ============================================================ */
 .showcase { position: relative; background: var(--white); }
+
+.show-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  padding: clamp(5rem,10vw,9rem) var(--pad) clamp(2rem,4vw,3.5rem);
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+.show-header__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  font-size: .72rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--gray-300);
+}
+.show-header__title {
+  font-size: clamp(4.5rem, 11vw, 10rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--black);
+}
+
 .show-stack { position: relative; }
 
 /* --- Étage du projet 1 (épinglé pendant le zoom) --- */
@@ -1252,4 +1280,67 @@ body.is-loading { overflow: hidden; height: 100vh; }
   display: flex;
   justify-content: center;
   padding: clamp(4rem, 9vw, 8rem) 1.5rem;
+}
+
+/* ============================================================
+   PARTENAIRES
+   ============================================================ */
+.partners {
+  background: var(--white);
+  border-top: 1px solid var(--border-light);
+  padding: clamp(4rem, 8vw, 7rem) 0;
+  overflow: hidden;
+}
+.partners__head {
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+.partners__intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 4rem;
+  align-items: end;
+}
+.partners__title {
+  font-size: clamp(4rem, 10vw, 9rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--black);
+}
+.partners__desc {
+  font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+  line-height: 1.65;
+  color: var(--gray-300);
+  max-width: 48ch;
+  padding-bottom: 0.4rem;
+}
+@media (max-width: 720px) {
+  .partners__intro { grid-template-columns: 1fr; }
+}
+.partners__track-wrap {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+}
+.partners__track {
+  display: flex;
+  align-items: center;
+  gap: clamp(3rem, 6vw, 6rem);
+  width: max-content;
+  animation: marquee 22s linear infinite;
+}
+.partners__track:hover { animation-play-state: paused; }
+.partners__logo {
+  font-size: clamp(1.1rem, 2.2vw, 1.7rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--gray-300);
+  white-space: nowrap;
+  transition: color 0.25s ease;
+  flex-shrink: 0;
+}
+.partners__logo:hover { color: var(--black); }
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }

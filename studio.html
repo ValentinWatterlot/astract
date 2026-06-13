@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio — Astract</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>try{if(sessionStorage.getItem("astract_seen")){var r=document.documentElement;r.classList.add("nav-ready");setTimeout(function(){r.classList.remove("nav-ready")},3000);}}catch(e){}</script>
+</head>
+<body>
+
+  <div class="transition" aria-hidden="true"><span class="transition__label"><svg class="transition__icon" viewBox="0 0 46 52" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 50 H13 L16 30 L6 33 Z"/><path d="M17 50 H27 L30 16 L20 21 Z"/><path d="M31 50 H41 L44 4 L34 11 Z"/></svg>Astract</span></div>
+
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="logo">
+        <svg class="logo__icon" viewBox="0 0 46 52" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M3 50 H13 L16 30 L6 33 Z"/>
+          <path d="M17 50 H27 L30 16 L20 21 Z"/>
+          <path d="M31 50 H41 L44 4 L34 11 Z"/>
+        </svg>
+        <span class="logo__name">Astract</span>
+      </a>
+      <nav class="nav-links">
+        <a href="projects.html" class="link-line">Projets</a>
+        <a href="studio.html" class="link-line">Studio</a>
+        <a href="contact.html" class="link-line">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="drawer">
+    <button class="drawer__close">Fermer</button>
+    <nav class="drawer__links">
+      <a href="index.html">Accueil</a>
+      <a href="projects.html">Projets</a>
+      <a href="studio.html">Studio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="drawer__meta">Bordeaux · Paris<br/>hello@astract.studio</div>
+  </div>
+
+  <main>
+    <section class="page-head wrap">
+      <span class="eyebrow" data-reveal>Le studio</span>
+      <h1 class="display headline-text" style="margin-top:1rem;max-width:14ch" data-reveal>
+        Nous dessinons l'<b>existant</b>.
+      </h1>
+    </section>
+
+    <section class="wrap" data-parallax style="aspect-ratio:16/7;overflow:hidden;border-radius:2px;margin-bottom:clamp(4rem,9vw,9rem)">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80" alt="Studio Astract" />
+    </section>
+
+    <section class="section wrap">
+      <div class="studio-intro">
+        <div class="studio-intro__label"><span class="eyebrow" data-reveal>Philosophie</span></div>
+        <div class="studio-intro__body headline-text" data-reveal>
+          <p>Astract est un studio d'architecture fondé sur une conviction : un beau projet ne se mesure pas au nombre de photos, mais à la <b>justesse</b> d'une intention. Nous concevons la rénovation comme une <b>conversation</b> avec ce qui existe déjà.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-black">
+      <div class="wrap">
+        <div class="proj-narr">
+          <div class="narr-block" data-reveal>
+            <span class="eyebrow">Approche</span>
+            <h3>Du concept au chantier</h3>
+            <p>Chaque projet commence par une lecture du lieu — sa lumière, sa structure, sa mémoire — avant la moindre ligne. Nous accompagnons nos clients du premier croquis jusqu'à la livraison.</p>
+          </div>
+          <div class="narr-block" data-reveal>
+            <span class="eyebrow">Valeurs</span>
+            <h3>Sobriété & matière</h3>
+            <p>Peu de gestes, mais justes. Des matières franches, une palette minérale, et une attention obsessionnelle aux détails de mise en œuvre.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <div class="section-head">
+        <h2 class="h-xl" data-reveal>Approche en<br/>trois temps</h2>
+      </div>
+      <div class="services" style="border-top:1px solid var(--border-light)" data-reveal-stagger>
+        <div class="service-row" style="border-bottom:1px solid var(--border-light)">
+          <span class="service-row__num" style="color:var(--gray-300)">01</span>
+          <div><div class="service-row__title">Écouter</div></div>
+          <span class="service-row__desc" style="color:var(--gray-300)">Comprendre l'usage, le lieu et le budget avant d'imaginer la forme.</span>
+          <span></span>
+        </div>
+        <div class="service-row" style="border-bottom:1px solid var(--border-light)">
+          <span class="service-row__num" style="color:var(--gray-300)">02</span>
+          <div><div class="service-row__title">Concevoir</div></div>
+          <span class="service-row__desc" style="color:var(--gray-300)">Un parti pris clair, des plans précis, des matières choisies.</span>
+          <span></span>
+        </div>
+        <div class="service-row" style="border-bottom:1px solid var(--border-light)">
+          <span class="service-row__num" style="color:var(--gray-300)">03</span>
+          <div><div class="service-row__title">Réaliser</div></div>
+          <span class="service-row__desc" style="color:var(--gray-300)">Suivi de chantier rigoureux jusqu'au moindre joint.</span>
+          <span></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap">
+        <span class="eyebrow" data-reveal>Travaillons ensemble</span>
+        <h2 class="cta__big" data-reveal><a href="contact.html">Parlons-en →</a></h2>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <h3>Astract — studio d'architecture & rénovation.</h3>
+        <div class="footer__col">
+          <h4>Navigation</h4>
+          <a href="projects.html" class="link-line">Projets</a>
+          <a href="studio.html" class="link-line">Studio</a>
+          <a href="contact.html" class="link-line">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <a href="mailto:hello@astract.studio" class="link-line">hello@astract.studio</a>
+          <p>Bordeaux · Paris</p>
+        </div>
+      </div>
+      <div class="footer__bar"><span>© 2026 Astract</span><span>Conçu avec soin</span></div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/hero.js"></script>
+  <script src="js/before-after.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

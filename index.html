@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Astract — Studio d'architecture</title>
+  <meta name="description" content="Astract — studio d'architecture spécialisé en rénovation, architecture d'intérieur et conception." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>try{if(sessionStorage.getItem("astract_seen")){var r=document.documentElement;r.classList.add("nav-ready");setTimeout(function(){r.classList.remove("nav-ready")},3000);}}catch(e){}</script>
+</head>
+<body class="is-loading">
+
+  <div class="transition" aria-hidden="true"><span class="transition__label"><svg class="transition__icon" viewBox="0 0 46 52" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 50 H13 L16 30 L6 33 Z"/><path d="M17 50 H27 L30 16 L20 21 Z"/><path d="M31 50 H41 L44 4 L34 11 Z"/></svg>Astract</span></div>
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="preloader">
+    <div class="preloader__brand"><span>Astract</span></div>
+    <div class="preloader__count"><span class="num">0</span><sup>%</sup></div>
+    <div class="preloader__bar"></div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="logo">
+        <svg class="logo__icon" viewBox="0 0 46 52" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M3 50 H13 L16 30 L6 33 Z"/>
+          <path d="M17 50 H27 L30 16 L20 21 Z"/>
+          <path d="M31 50 H41 L44 4 L34 11 Z"/>
+        </svg>
+        <span class="logo__name">Astract</span>
+      </a>
+      <nav class="nav-links">
+        <a href="projects.html" class="link-line">Projets</a>
+        <a href="studio.html" class="link-line">Studio</a>
+        <a href="contact.html" class="link-line">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- ============ DRAWER MOBILE ============ -->
+  <div class="drawer">
+    <button class="drawer__close">Fermer</button>
+    <nav class="drawer__links">
+      <a href="index.html">Accueil</a>
+      <a href="projects.html">Projets</a>
+      <a href="studio.html">Studio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="drawer__meta">Bordeaux · Paris<br/>hello@astract.studio</div>
+  </div>
+
+  <!-- ============ HERO (carrousel plein écran) ============ -->
+  <section class="hero" data-hero>
+    <div class="hero__slides"></div>
+    <div class="hero__caption wrap">
+      <span class="hero__mask"><h1 class="hero__title"></h1></span>
+      <span class="hero__mask"><p class="hero__loc"></p></span>
+    </div>
+    <div class="hero__dots"></div>
+    <div class="hero__nav">
+      <button class="hero__arrow" data-hero-prev aria-label="Précédent">←</button>
+      <button class="hero__arrow" data-hero-next aria-label="Suivant">→</button>
+    </div>
+  </section>
+
+  <!-- ============ STUDIO + PREUVE SOCIALE (même section) ============ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="studio-intro">
+        <div class="studio-intro__label">
+          <span class="eyebrow" data-reveal><i class="led"></i>Le studio</span>
+        </div>
+        <div class="studio-intro__body headline-text" data-studio-body>
+          <p>Astract conçoit des lieux qui <b>racontent</b> ceux qui les habitent. Nous travaillons l'existant — la rénovation comme un dialogue entre la mémoire d'un lieu et un usage <b>contemporain</b>.</p>
+          <a href="studio.html" class="c-btn" style="margin-top:2.5rem">Découvrir le studio <span class="arrow">↗</span></a>
+        </div>
+      </div>
+      <div class="stats stats--light" data-reveal-stagger style="margin-top: clamp(4rem,8vw,7rem)">
+        <div class="stat">
+          <div class="stat__num" data-count="18" data-suffix="+">18+</div>
+          <div class="stat__label">Années de pratique</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num" data-count="120" data-suffix="+">120+</div>
+          <div class="stat__label">Projets livrés</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num" data-count="5" data-suffix="">5</div>
+          <div class="stat__label">Récompenses internationales</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="section bg-black">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="h-xl" style="color:var(--white)" data-reveal>Ce que<br/>nous faisons</h2>
+        <span class="eyebrow" data-reveal>03 — Services</span>
+      </div>
+      <div class="services" data-reveal-stagger>
+        <a class="service-row" href="projects.html">
+          <span class="service-row__num">01</span>
+          <div>
+            <div class="service-row__title">Rénovation</div>
+          </div>
+          <span class="service-row__desc">Réhabilitation complète, restructuration de plans et reprise d'existant. Notre cœur de métier.</span>
+          <span class="service-row__arrow">↗</span>
+        </a>
+        <a class="service-row" href="projects.html">
+          <span class="service-row__num">02</span>
+          <div>
+            <div class="service-row__title">Architecture d'intérieur</div>
+          </div>
+          <span class="service-row__desc">Aménagement, matières, lumière et mobilier sur mesure pour des espaces à vivre.</span>
+          <span class="service-row__arrow">↗</span>
+        </a>
+        <a class="service-row" href="projects.html">
+          <span class="service-row__num">03</span>
+          <div>
+            <div class="service-row__title">Conception</div>
+          </div>
+          <span class="service-row__desc">Projets neufs, extensions et conception architecturale du premier croquis au chantier.</span>
+          <span class="service-row__arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJETS SÉLECTIONNÉS (showcase scroll) ============ -->
+  <section class="showcase" data-showcase></section>
+
+  <!-- ============ CTA + FOOTER ============ -->
+  <section class="cta">
+    <div class="wrap">
+      <span class="eyebrow" data-reveal>Un projet ?</span>
+      <h2 class="cta__big" data-reveal>
+        <a href="contact.html">Parlons-en →</a>
+      </h2>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <h3>Astract — studio d'architecture & rénovation.</h3>
+        <div class="footer__col">
+          <h4>Navigation</h4>
+          <a href="projects.html" class="link-line">Projets</a>
+          <a href="studio.html" class="link-line">Studio</a>
+          <a href="contact.html" class="link-line">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <a href="mailto:hello@astract.studio" class="link-line">hello@astract.studio</a>
+          <p>Bordeaux · Paris</p>
+          <a href="#" class="link-line">Instagram</a>
+        </div>
+      </div>
+      <div class="footer__bar">
+        <span>© 2026 Astract</span>
+        <span>Conçu avec soin</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/hero.js"></script>
+  <script src="js/before-after.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projets — Astract</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>try{if(sessionStorage.getItem("astract_seen")){var r=document.documentElement;r.classList.add("nav-ready");setTimeout(function(){r.classList.remove("nav-ready")},3000);}}catch(e){}</script>
+</head>
+<body>
+
+  <div class="transition" aria-hidden="true"><span class="transition__label"><svg class="transition__icon" viewBox="0 0 46 52" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 50 H13 L16 30 L6 33 Z"/><path d="M17 50 H27 L30 16 L20 21 Z"/><path d="M31 50 H41 L44 4 L34 11 Z"/></svg>Astract</span></div>
+
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="logo">
+        <svg class="logo__icon" viewBox="0 0 46 52" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M3 50 H13 L16 30 L6 33 Z"/>
+          <path d="M17 50 H27 L30 16 L20 21 Z"/>
+          <path d="M31 50 H41 L44 4 L34 11 Z"/>
+        </svg>
+        <span class="logo__name">Astract</span>
+      </a>
+      <nav class="nav-links">
+        <a href="projects.html" class="link-line">Projets</a>
+        <a href="studio.html" class="link-line">Studio</a>
+        <a href="contact.html" class="link-line">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="drawer">
+    <button class="drawer__close">Fermer</button>
+    <nav class="drawer__links">
+      <a href="index.html">Accueil</a>
+      <a href="projects.html">Projets</a>
+      <a href="studio.html">Studio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="drawer__meta">Bordeaux · Paris<br/>hello@astract.studio</div>
+  </div>
+
+  <main>
+    <section class="page-head bg-black">
+      <div class="wrap">
+        <span class="eyebrow" data-reveal>Sélection 2022 — 2024</span>
+        <h1 class="display" style="color:var(--white);margin-top:1rem" data-reveal>Projets</h1>
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">Tout</button>
+          <button class="filter-btn" data-filter="Rénovation">Rénovation</button>
+          <button class="filter-btn" data-filter="Architecture intérieure">Architecture d'intérieur</button>
+          <button class="filter-btn" data-filter="Conception">Conception</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <div class="list-grid" data-list-grid></div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap">
+        <span class="eyebrow" data-reveal>Un projet ?</span>
+        <h2 class="cta__big" data-reveal><a href="contact.html">Parlons-en →</a></h2>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <h3>Astract — studio d'architecture & rénovation.</h3>
+        <div class="footer__col">
+          <h4>Navigation</h4>
+          <a href="projects.html" class="link-line">Projets</a>
+          <a href="studio.html" class="link-line">Studio</a>
+          <a href="contact.html" class="link-line">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <a href="mailto:hello@astract.studio" class="link-line">hello@astract.studio</a>
+          <p>Bordeaux · Paris</p>
+        </div>
+      </div>
+      <div class="footer__bar"><span>© 2026 Astract</span><span>Conçu avec soin</span></div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/hero.js"></script>
+  <script src="js/before-after.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
